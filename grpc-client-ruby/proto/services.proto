@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "messages.proto";
+
+package services;
+
+service RepositoryEnrollerService {
+    rpc enroll (mx.jovannypcg.grpcserver.messages.Repository) returns (mx.jovannypcg.grpcserver.messages.EnrollmentResponse) {}
+}
+
+service PingPongService {
+    rpc play(stream mx.jovannypcg.grpcserver.messages.Ping) returns (stream mx.jovannypcg.grpcserver.messages.Pong) {}
+}
