@@ -11,6 +11,8 @@ message Repository {
     int64  starts = 3;
     float  code_frequency = 4;
     map<string, int32> language_contributions = 5;
+    string avatar = 6;
+    string url = 7;
 }
 
 message EnrollmentResponse {

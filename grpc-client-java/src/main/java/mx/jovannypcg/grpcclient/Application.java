@@ -18,6 +18,13 @@ public class Application implements CommandLineRunner {
 
     private static final String HOST = "localhost";
     private static final int PORT = 5000;
+    private static final String DESCRIPTION = "SMS Long code service is primarily used for lead generation " +
+            "or receiving feedbacks from the customers. In a shared long code environment every company " +
+            "which wants to avail this service will be provided with a Keyword (Keyword is an unique identifier " +
+            "for your company on our shared Long code. e.g. if, your companies name is ABC Ltd and you took a " +
+            "keyword say ABCL on our long code then every message which starts with ABCL and a blank space will " +
+            "be forwarded to your panel. In short we recognize the incoming messages on the basis of keywords and " +
+            "forward it to the respective companies account).";
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
@@ -41,10 +48,12 @@ public class Application implements CommandLineRunner {
 
         Repository request = Repository.newBuilder()
                 .setName("protocol-server-java")
-                .setDescription("An example project that demonstrates gRPC in action")
+                .setDescription(DESCRIPTION)
                 .setCodeFrequency(5.4f)
                 .putAllLanguageContributions(languageContributions)
                 .setStarts(2345341L)
+                .setAvatar("https://avatars2.githubusercontent.com/u/7593599?s=460&v=4")
+                .setUrl("https://github.com/jovannypcg/grpc-orchestration")
                 .build();
 
         try {

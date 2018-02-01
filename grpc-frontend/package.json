@@ -1,0 +1,5 @@
+{
+  "name": "grpc-frontend",
+  "private": true,
+  "dependencies": {}
+}

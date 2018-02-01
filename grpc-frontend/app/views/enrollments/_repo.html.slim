@@ -1,0 +1,10 @@
+div class='container'
+  div class='row card horizontal'
+    div class='col s2 card-image'
+      == image_tag repo.avatar
+
+    div class='col s10 card-stacked'
+      div class='card-content'
+        == repo.description
+      div class='card-action'
+        == link_to(repo.url) { repo.name }

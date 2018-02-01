@@ -1,0 +1,6 @@
+header
+  == render 'navigation'
+
+section
+  - @repos.each do |repo_from_queue|
+    == render 'repo', repo: repo_from_queue
